@@ -9,4 +9,4 @@ RUN apk add --no-cache postgresql$POSTGRES_VERSION-client \
 WORKDIR /scripts
 
 COPY backup.sh .
-ENTRYPOINT [ "/scripts/backup.sh" ]
+ENTRYPOINT [ "sh", "backup.sh" ]
